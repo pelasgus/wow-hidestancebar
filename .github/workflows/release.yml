@@ -1,0 +1,32 @@
+# Author: D.A.Pelasgus
+# release.yml
+
+name: Lua Dependencies & Evaluation
+
+
+on:
+  push:
+    branch:
+      - main
+
+
+jobs:
+  nix-setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    
+    # - name: Install & Setup Nix
+    #   uses: cachix/install-nix-action@v27
+    #   with:
+    #     nix_path: nixpkgs=channel:nixos-unstable
+    
+    # - name: Install & Setup Lua & Dependencies
+    #   run: nix-shell shell-lua/shell-lua.nix
+    
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
