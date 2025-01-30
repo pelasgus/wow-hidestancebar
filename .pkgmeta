@@ -1,0 +1,9 @@
+package-as: StanceBarBegone
+author: D.A.Pelasgus demetrius@pelasgus.xyz
+
+enable-nolib-creation: no
+
+externals: {}
+
+license-output: LICENSE.md
+
