@@ -1,7 +1,7 @@
 # Author: D.A.Pelasgus
 # release.yml
 
-name: Lua Dependencies & Evaluation
+name: Lua Dependencies & Evaluation & Release
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
       - 'v*'  # Trigger on tags that start with 'v', like v1.0.0
 
 jobs:
-  nix-setup:
+  create-release:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +29,6 @@ jobs:
     #   run: nix-shell shell-lua/shell-lua.nix
     
     - name: Create GitHub Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
