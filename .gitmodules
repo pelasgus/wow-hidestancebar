@@ -1,0 +1,3 @@
+[submodule "shell-lua"]
+	path = shell-lua
+	url = git@github.com:pelasgus/shell-lua.git
