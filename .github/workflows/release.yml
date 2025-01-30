@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v*'  # Trigger on tags that start with 'v', like v1.0.0
 
 jobs:
   nix-setup:
@@ -15,15 +17,6 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-
-    - name: Create Version Tag
-      id: create_tag
-      run: |
-        # Set the version tag (you can customize this, e.g., using a version number, commit hash, etc.)
-        TAG="v$(date +'%Y.%m.%d.%H%M%S')"  # Example: v2025.01.30.153000
-        echo "Creating tag $TAG"
-        git tag $TAG
-        git push origin $TAG
     
     # Uncomment the following steps if you want to install Nix and Lua dependencies
     
