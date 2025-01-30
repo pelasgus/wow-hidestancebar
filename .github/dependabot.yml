@@ -1,0 +1,14 @@
+# Author: D.A.Pelasgus
+# dependabot.yml
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
+      update: "Update GitHub Actions workflow"
+    allow:
+      - dependency-type: "all"
