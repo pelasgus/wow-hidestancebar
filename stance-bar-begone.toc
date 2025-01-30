@@ -1,0 +1,5 @@
+## Interface: 110000
+## Title: Stance Bar Begone
+## Author: D.A.Pelasgus
+ 
+core.lua
