@@ -1,1 +1,1 @@
-run RegisterStateDriver(StanceBar, "visibility", "hide")
+RegisterStateDriver(StanceBar, "visibility", "hide")
